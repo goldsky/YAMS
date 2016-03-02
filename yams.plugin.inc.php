@@ -474,8 +474,8 @@ case 'OnBeforeDocFormSave':
               {
                 $modx->manager->saveFormValues(27);
                 $url = 'index.php?a=27&id=' . $docId;
-                include_once 'header.inc.php';
-                $modx->webAlert(
+                include_once 'webAlertheader.inc.php';
+                $modx->(
                   sprintf(
                     $_lang['duplicate_alias_found']
                     , $duplicateDocId . ' (' . $langId . ')'
@@ -488,7 +488,7 @@ case 'OnBeforeDocFormSave':
                 $modx->manager->saveFormValues(4);
                 $url = 'index.php?a=4';
                 include_once 'header.inc.php';
-                $modx->webAlert(
+                $modx->webAlertAndQuit(
                   sprintf(
                     $_lang['duplicate_alias_found']
                     , $duplicateDocId . ' (' . $langId . ')'
@@ -540,7 +540,7 @@ case 'OnBeforeDocFormSave':
                 $modx->manager->saveFormValues(27);
                 $url = 'index.php?a=27&id=' . $docId;
                 include_once 'header.inc.php';
-                $modx->webAlert(
+                $modx->webAlertAndQuit(
                   sprintf(
                     $_lang['duplicate_alias_found']
                     , $duplicateDocId
@@ -553,7 +553,7 @@ case 'OnBeforeDocFormSave':
                 $modx->manager->saveFormValues(4);
                 $url = 'index.php?a=4';
                 include_once 'header.inc.php';
-                $modx->webAlert(
+                $modx->webAlertAndQuit(
                   sprintf(
                     $_lang['duplicate_alias_found']
                     , $duplicateDocId
